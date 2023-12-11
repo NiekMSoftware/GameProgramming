@@ -26,6 +26,7 @@
     <ClCompile Include="1.5\game_stats.cpp" />
     <ClCompile Include="1.6\game_stats2.cpp" />
     <ClCompile Include="1.7\game_stats3.cpp" />
+    <ClCompile Include="lost_fortune.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

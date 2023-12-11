@@ -2,5 +2,5 @@
 *.vs
 
 #ignore the debug stuff
-*/x64
-*/Debug
+\x64
+\Debug
