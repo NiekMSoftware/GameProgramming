@@ -1,0 +1,4 @@
+Game Programming Logbook
+
+12/11/2023:
+Started with study, introducion is about variables and ISO standard.
