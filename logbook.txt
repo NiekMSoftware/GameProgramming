@@ -11,3 +11,6 @@ Just learned the following:
 - typedef, is often used to create shorter names for types with long names. 
   E.x; typedef unsigned short int ushort;
        ushort score = 10;
+
+Created a small user based adventure program, and finished up some exercises of Chapter 1.
+I feel like I made a lot of progress due to this!
