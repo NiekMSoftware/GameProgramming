@@ -1,2 +1,6 @@
 #exclude the .vs files
 *.vs
+
+#ignore the debug stuff
+*/x64
+*/Debug
