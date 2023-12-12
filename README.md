@@ -30,4 +30,5 @@ I do this study with the help of this [book](https://www.amazon.com/-/en/Michael
   Started with Chapter 2, it was about if statements and do-while loops. 
 
   Next up are the exercises as I finished up the theory.
+  Finished up the exercises, I made sure to make it a [release](https://github.com/NiekMSoftware/GameProgramming/releases/tag/v1.0.1) as well! There were currently no bugs found, as it is a basic program.
 </details>
