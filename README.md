@@ -24,3 +24,10 @@ I do this study with the help of this [book](https://www.amazon.com/-/en/Michael
   Created a small user based adventure program, and finished up some exercises of Chapter 1.
   I feel like I made a lot of progress due to this!
 </details>
+
+<details>
+  <summary>12/12/2023</summary>
+  Started with Chapter 2, it was about if statements and do-while loops. 
+
+  Next up are the exercises as I finished up the theory.
+</details>
