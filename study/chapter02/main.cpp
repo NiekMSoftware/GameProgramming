@@ -4,6 +4,7 @@
 #include <ctime>
 
 #include "GuessNumber.h"
+#include "exercise/GuessMyNumber2.h"
 #include "exercise/MenuChooser2.h"
 
 using namespace std;
@@ -46,9 +47,8 @@ void DieRoller();
 
 int main()
 {
-	auto* menu = new MenuChooser2();
-	menu->Run();
-
+	auto* application = new GuessMyNumber2();
+	application->Run();
 	return 0;
 }
 
