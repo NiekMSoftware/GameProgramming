@@ -129,9 +129,11 @@
   <ItemGroup>
     <ClCompile Include="GuessNumber.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="exercise\MenuChooser2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GuessNumber.h" />
+    <ClInclude Include="exercise\MenuChooser2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
