@@ -36,7 +36,7 @@ void GuessMyNumber2::Run()
 		}
 		else if (guess < targetNumber)
 		{
-			cout << "The computer guess " << guess << ", which is too low.\n";
+			cout << "The computer guessed " << guess << ", which is too low.\n";
 			lowerBound = guess + 1;
 		}
 		else
