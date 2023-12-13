@@ -207,6 +207,9 @@ void Chapter3_Project()
 	// Save the single character of input
 	char input = ' ';
 
+	// Save the string
+	string guess;
+
 	// keep track of the score
 	int score = 0;
 
@@ -255,7 +258,6 @@ void Chapter3_Project()
 		cout << "Enter 'quit' to quit the game.\n";
 		cout << "The jumble is: " << jumble;
 
-		string guess;
 		cout << "\n\nYour guess: ";
 		cin >> guess;
 
@@ -291,6 +293,8 @@ void Chapter3_Project()
 			cout << "Would you like to play again? (y/n): ";
 			cin >> input;
 		}
+		else if(guess == "quit")
+			break;
 	} while (input != 'n');
 
 	cout << "\nThanks for playing!";
