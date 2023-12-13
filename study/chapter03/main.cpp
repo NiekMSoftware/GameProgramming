@@ -217,12 +217,12 @@ void Chapter3_Project()
 	const int NUM_WORDS = 6;
 	const string WORDS[NUM_WORDS][NUM_FIELDS] =
 	{
-		{"wall", "Do you feel you're banging your head against something?"},
-		{"glasses", "These might help you see the answer. :)"},
-		{"labored", "Going slowly, is it?"},
+		{"wall", "Do you feel you're banging your head against something?\n"},
+		{"glasses", "These might help you see the answer. :)\n"},
+		{"labored", "Going slowly, is it?\n"},
 		{"persistent", "Keep at it."},
-		{"jumble", "It's what the game is all about!"},
-		{"cinder-block", "Some would say your mom is one."}
+		{"jumble", "It's what the game is all about!\n"},
+		{"cinder-block", "Some would say your mom is one.\n"}
 	};
 
 	do
@@ -265,13 +265,15 @@ void Chapter3_Project()
 			if (guess == "hint")
 			{
 				cout << theHint;
+				score -= 5;
+				if (score < 0) score = 0; // make sure the score will stay at 0
 			}
 			else
 			{
 				cout << "Sorry, that's not it.\n\n";
 			}
 
-			cout << "\n\nUnscramble the letters to make a word.\n";
+			cout << "\nUnscramble the letters to make a word.\n";
 			cout << "Score: " << score << "\n";
 			cout << "Enter 'hint' for a hint.\n";
 			cout << "Enter 'quit' to quit the game.\n";
