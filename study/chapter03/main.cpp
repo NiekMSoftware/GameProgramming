@@ -11,9 +11,13 @@ void Chapter3_1();
 // Demonstrates string objects
 void Chapter3_2();
 
+// Hero's Inventory
+// Demonstrates arrays
+void Chapter3_3();
+
 int main()
 {
-	Chapter3_2();
+	Chapter3_3();
 	return 0;
 }
 
@@ -101,5 +105,50 @@ void Chapter3_2()
 	if(phrase.empty())
 	{
 		cout << "\nThe phrase is no more.\n";
+	}
+}
+
+void Chapter3_3()
+{
+	const int MAX_ITEMS = 10;
+	string inventory[MAX_ITEMS];
+
+	int numItems = 0;
+	inventory[numItems++] = "Sword";
+	inventory[numItems++] = "Shield";
+	inventory[numItems++] = "Armor";
+
+	cout << "Your items:\n";
+	for (int i = 0; i < numItems; ++i)
+	{
+		cout << inventory[i] << endl;
+	}
+
+	cout << "\nYou trade your sword for a battle axe.\n";
+	inventory[0] = "Battle axe";
+
+	cout << "\nYour items:\n";
+	for (int i = 0; i < numItems; ++i)
+	{
+		cout << inventory[i] << endl;
+	}
+
+	cout << "\nThe item name '" << inventory[0] << "' has ";
+	cout << inventory[0].size() << " letters in it.\n";
+
+	cout << "\nYou find a healing potion.\n";
+	if(numItems < MAX_ITEMS)
+	{
+		inventory[numItems++] = "Healing potion";
+	}
+	else
+	{
+		cout << "You have too many items and can't carry another.";
+	}
+
+	cout << "\nYour items:\n";
+	for (int i = 0; i < numItems; ++i)
+	{
+		cout << inventory[i] << endl;
 	}
 }
