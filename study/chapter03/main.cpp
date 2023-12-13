@@ -1,5 +1,7 @@
 ﻿#include <iostream>
 #include <string>
+#include <cstdlib> // used for jumble word
+#include <ctime> // used for jumble word
 
 using namespace std;
 
@@ -15,9 +17,17 @@ void Chapter3_2();
 // Demonstrates arrays
 void Chapter3_3();
 
+// Tic-Tac-Toe Board
+// Demonstrates multidimensional arrays
+void Chapter3_4();
+
+// Word Jumble!
+// The classic word jumble game where the player can ask for a hint
+void Chapter3_Project();
+
 int main()
 {
-	Chapter3_3();
+	Chapter3_Project();
 	return 0;
 }
 
@@ -151,4 +161,48 @@ void Chapter3_3()
 	{
 		cout << inventory[i] << endl;
 	}
+}
+
+void Chapter3_4()
+{
+	const int ROWS = 3;
+	const int COLUMNS = 3;
+	char board[ROWS][COLUMNS] = 
+	{
+		{'O', 'X', 'O'},
+		{' ', 'X', 'X'},
+		{'X', 'O', 'X'}
+	};
+
+	cout << "Here's the tic-tac-toe board:\n";
+	for (int i = 0; i < ROWS; ++i)
+	{
+		for(int j = 0; j < COLUMNS; ++j)
+		{
+			cout << board[i][j];
+		}
+
+		cout << endl;
+	}
+
+	cout << "\n'X' moves to the empty location.\n\n";
+	board[1][0] = 'X';
+
+	cout << "Now the tic-tac-toe board is:\n";
+	for (int i = 0; i < ROWS; ++i)
+	{
+		for (int j = 0; j < COLUMNS; ++j)
+		{
+			cout << board[i][j];
+		}
+
+		cout << endl;
+	}
+
+	cout << "\n'X' wins!";
+}
+
+void Chapter3_Project()
+{
+	
 }
