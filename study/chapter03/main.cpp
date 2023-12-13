@@ -204,70 +204,92 @@ void Chapter3_4()
 
 void Chapter3_Project()
 {
-	enum fields {WORD, HINT, NUM_FIELDS};
-	const int NUM_WORDS = 6;
-	const string WORDS[NUM_WORDS][NUM_FIELDS] =
+	// Save the single character of input
+	char input = ' ';
+
+	cout << "\t\tWelcome to Word Jumble!";
+
+	do
 	{
-		{"wall", "Do you feel you're banging your head against something?"},
-		{"glasses", "These might help you see the answer. :)"},
-		{"labored", "Going slowly, is it?"},
-		{"persistent", "Keep at it."},
-		{"jumble", "It's what the game is all about!"},
-		{"cinder-block", "Some would say your mom is one."}
-	};
-
-	// pick a random word from the choices
-	srand(static_cast<unsigned int>(time(0)));
-	int choice = (rand() % NUM_WORDS);
-	string theWord = WORDS[choice][WORD];	// word to guess
-	string theHint = WORDS[choice][HINT];	// hint for word
-
-	// jumbling the word
-	string jumble = theWord;
-	int length = jumble.size();
-
-	for(int i = 0; i < length; ++i)
-	{
-		int index1 = (rand() % length);
-		int index2 = (rand() % length);
-
-		char temp = jumble[index1];
-
-		jumble[index1] = jumble[index2];
-		jumble[index2] = temp;
-	}
-
-	// Welcoming the player
-	cout << "\t\tWelcome to Word Jumble!\n\n";
-	cout << "Unscramble the letters to make a word.\n";
-	cout << "Enter 'hint' for a hint.\n";
-	cout << "Enter 'quit' to quit the game.\n";
-	cout << "The jumble is: " << jumble;
-
-	string guess;
-	cout << "\n\nYour guess: ";
-	cin >> guess;
-
-	// Enter the game loop
-	while ((guess != theWord) && (guess != "quit"))
-	{
-		if(guess == "hint")
+		// Keep looping the game
+		enum fields { WORD, HINT, NUM_FIELDS };
+		const int NUM_WORDS = 6;
+		const string WORDS[NUM_WORDS][NUM_FIELDS] =
 		{
-			cout << theHint;
-		}
-		else
+			{"wall", "Do you feel you're banging your head against something?"},
+			{"glasses", "These might help you see the answer. :)"},
+			{"labored", "Going slowly, is it?"},
+			{"persistent", "Keep at it."},
+			{"jumble", "It's what the game is all about!"},
+			{"cinder-block", "Some would say your mom is one."}
+		};
+
+		// pick a random word from the choices
+		srand(static_cast<unsigned int>(time(0)));
+		int choice = (rand() % NUM_WORDS);
+		string theWord = WORDS[choice][WORD];	// word to guess
+		string theHint = WORDS[choice][HINT];	// hint for word
+
+		// keep track of the score
+		int score = 0;
+
+		// jumbling the word
+		string jumble = theWord;
+		int length = jumble.size();
+
+		for (int i = 0; i < length; ++i)
 		{
-			cout << "Sorry, that's not it.";
+			int index1 = (rand() % length);
+			int index2 = (rand() % length);
+
+			char temp = jumble[index1];
+
+			jumble[index1] = jumble[index2];
+			jumble[index2] = temp;
 		}
 
+		// Welcoming the player
+		cout << "\n\nUnscramble the letters to make a word.\n";
+		cout << "Score: " << score << "\n";
+		cout << "Enter 'hint' for a hint.\n";
+		cout << "Enter 'quit' to quit the game.\n";
+		cout << "The jumble is: " << jumble;
+
+		string guess;
 		cout << "\n\nYour guess: ";
 		cin >> guess;
-	}
 
-	if(guess == theWord)
-	{
-		cout << "That's it! You guessed it!\n";
-	}
+		// Enter the game loop
+		while ((guess != theWord) && (guess != "quit"))
+		{
+			if (guess == "hint")
+			{
+				cout << theHint;
+			}
+			else
+			{
+				cout << "Sorry, that's not it.\n\n";
+			}
 
-	cout << "Thanks for playing!";
+			cout << "Unscramble the letters to make a word.\n";
+			cout << "Score: " << score << "\n";
+			cout << "Enter 'hint' for a hint.\n";
+			cout << "Enter 'quit' to quit the game.\n";
+			cout << "The jumble is: " << jumble;
+
+			cout << "\n\nYour guess: ";
+			cin >> guess;
+		}
+
+		if (guess == theWord)
+		{
+			cout << "That's it! You guessed it!\n";
+			score = (score + jumble.size());
+
+			cout << "Would you like to play again? (y/n): ";
+			cin >> input;
+		}
+	} while (input != 'n');
+
+	cout << "\nThanks for playing!";
 }
