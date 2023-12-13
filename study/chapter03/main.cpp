@@ -207,31 +207,31 @@ void Chapter3_Project()
 	// Save the single character of input
 	char input = ' ';
 
+	// keep track of the score
+	int score = 0;
+
 	cout << "\t\tWelcome to Word Jumble!";
+
+	// Words to jumble
+	enum fields { WORD, HINT, NUM_FIELDS };
+	const int NUM_WORDS = 6;
+	const string WORDS[NUM_WORDS][NUM_FIELDS] =
+	{
+		{"wall", "Do you feel you're banging your head against something?"},
+		{"glasses", "These might help you see the answer. :)"},
+		{"labored", "Going slowly, is it?"},
+		{"persistent", "Keep at it."},
+		{"jumble", "It's what the game is all about!"},
+		{"cinder-block", "Some would say your mom is one."}
+	};
 
 	do
 	{
-		// Keep looping the game
-		enum fields { WORD, HINT, NUM_FIELDS };
-		const int NUM_WORDS = 6;
-		const string WORDS[NUM_WORDS][NUM_FIELDS] =
-		{
-			{"wall", "Do you feel you're banging your head against something?"},
-			{"glasses", "These might help you see the answer. :)"},
-			{"labored", "Going slowly, is it?"},
-			{"persistent", "Keep at it."},
-			{"jumble", "It's what the game is all about!"},
-			{"cinder-block", "Some would say your mom is one."}
-		};
-
 		// pick a random word from the choices
 		srand(static_cast<unsigned int>(time(0)));
 		int choice = (rand() % NUM_WORDS);
 		string theWord = WORDS[choice][WORD];	// word to guess
 		string theHint = WORDS[choice][HINT];	// hint for word
-
-		// keep track of the score
-		int score = 0;
 
 		// jumbling the word
 		string jumble = theWord;
@@ -271,7 +271,7 @@ void Chapter3_Project()
 				cout << "Sorry, that's not it.\n\n";
 			}
 
-			cout << "Unscramble the letters to make a word.\n";
+			cout << "\n\nUnscramble the letters to make a word.\n";
 			cout << "Score: " << score << "\n";
 			cout << "Enter 'hint' for a hint.\n";
 			cout << "Enter 'quit' to quit the game.\n";
@@ -284,7 +284,7 @@ void Chapter3_Project()
 		if (guess == theWord)
 		{
 			cout << "That's it! You guessed it!\n";
-			score = (score + jumble.size());
+			score += jumble.size();
 
 			cout << "Would you like to play again? (y/n): ";
 			cin >> input;
