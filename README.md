@@ -35,7 +35,6 @@ I do this study with the help of this [book](https://www.amazon.com/-/en/Michael
 <details>
   <summary>12/13/2023</summary>
     Started and finished chapter 3, it was about the usages of arrays and strings. How to check it's length and replace certain items from the arrays.
-
     Final project of the chapter was to create a [Word Jumble](https://github.com/NiekMSoftware/GameProgramming/releases/tag/v1.0.0-wordjumble) project. I have finished it also with release now.
 </details>
 
