@@ -39,3 +39,12 @@ I do this study with the help of this [book](https://www.amazon.com/-/en/Michael
 
   Final project of the chapter was to create a [Word Jumble](https://github.com/NiekMSoftware/GameProgramming/releases/tag/v1.0.0-wordjumble) project. I have finished it also with release now.
 </details>
+
+<details>
+  <summary>12/15/2023</summary>
+  Created and started working on chapter 4. Down below is all what was being taught!
+  <details>
+    <summary>Chapter 4.1 | Vector</summary>
+    Got taught about vectors (List in C# terms), the push_back function and pop_back basically.
+  </details>
+</details>
