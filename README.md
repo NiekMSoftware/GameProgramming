@@ -51,3 +51,11 @@ I do this study with the help of this [book](https://www.amazon.com/-/en/Michael
       Learned about iterators and how to use them, book summarized them as a Post-It note for the index.
   </details>
 </details>
+
+<details>
+  <summary>12/16/2023</summary>
+  <details>
+    <summary>Chapter 4.3 | Algorithms</summary>
+    Learned about algorithms, mainly how to shuffle and sort out containers.
+  </details>
+</details>
