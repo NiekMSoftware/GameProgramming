@@ -44,6 +44,8 @@ I do this study with the help of this [book](https://www.amazon.com/-/en/Michael
   <details>
     <summary>Chapter 4.1 | Vector</summary>
       Got taught about vectors (List in C# terms), the push_back function and pop_back basically.
+  </details>
+  <details>
     <summary>Chapter 4.2 | Iterators </summary>
       Learned about iterators and how to use them, book summarized them as a Post-It note for the index.
   </details>
