@@ -2,6 +2,11 @@
 #include <string>
 #include <vector>
 
+// libraries for high scores
+#include <algorithm>
+#include <ctime>
+#include <cstdlib>
+
 using namespace std;
 
 // Hero's Inventory 2.0
@@ -12,9 +17,13 @@ void Chapter4_1();
 // Demonstrates iterators
 void Chapter4_2();
 
+// High Scores
+// Demonstrates algorithms
+void Chapter4_3();
+
 int main()
 {
-	Chapter4_2();
+	Chapter4_3();
 	return 0;
 }
 
@@ -109,6 +118,57 @@ void Chapter4_2()
 	inventory.erase((inventory.begin() + 2));
 	cout << "\nYour items:\n";
 	for (iter = inventory.begin(); iter != inventory.end(); ++iter)
+	{
+		cout << *iter << endl;
+	}
+}
+
+void Chapter4_3()
+{
+	vector<int>::const_iterator iter;
+
+	cout << "Creating a list of scores.";
+	vector<int> scores;
+	scores.push_back(1500);
+	scores.push_back(3500);
+	scores.push_back(7500);
+
+	cout << "\nHigh scores:\n";
+	for(iter = scores.begin(); iter != scores.end(); ++iter)
+	{
+		cout << *iter << endl;
+	}
+
+	cout << "\nFinding a score.";
+
+	int score;
+	cout << "\nEnter a score to find: ";
+	cin >> score;
+
+	iter = find(scores.begin(), scores.end(), score);
+	if(iter != scores.end())
+	{
+		cout << "Score found.\n";
+	}
+	else
+	{
+		cout << "\nScore not found.\n";
+	}
+
+	cout << "\nRandomizing scores.";
+	srand(static_cast<unsigned int>(time(0)));
+	random_shuffle(scores.begin(), scores.end());
+
+	cout << "\nHigh scores:\n";
+	for(iter = scores.begin(); iter != scores.end(); ++iter)
+	{
+		cout << *iter << endl;
+	}
+
+	cout << "\nSorting scores.";
+	sort(scores.begin(), scores.end());
+	cout << "\nHigh scores:\n";
+	for(iter = scores.begin(); iter != scores.end(); ++iter)
 	{
 		cout << *iter << endl;
 	}
