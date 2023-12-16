@@ -21,9 +21,12 @@ void Chapter4_2();
 // Demonstrates algorithms
 void Chapter4_3();
 
+// Understanding Vector Performance
+void Chapter4_4();
+
 int main()
 {
-	Chapter4_3();
+	Chapter4_4();
 	return 0;
 }
 
@@ -172,4 +175,23 @@ void Chapter4_3()
 	{
 		cout << *iter << endl;
 	}
+}
+
+void Chapter4_4()
+{
+	cout << "Creating 10 element vector to hold scores.\n";
+	vector<int> scores(10, 0);	// Initialize all 10 elements to 0
+	cout << "Vector size is: " << scores.size() << endl;
+	cout << "Vector capacity is: " << scores.capacity() << endl;
+
+	cout << "\nAdding score.\n";
+	scores.push_back(0); // memory is reallocated to accommodate growth
+	cout << "Vector size is: " << scores.size() << endl;
+	cout << "Vector capacity is: " << scores.capacity() << endl;
+
+	cout << "\nReserving more memory.\n";
+	scores.reserve(20);
+	cout << "Vector size is: " << scores.size() << endl;
+	cout << "Vector capacity is: " << scores.capacity() << endl;
+	cout << "Vector capacity is: " << scores.capacity() << endl;
 }
