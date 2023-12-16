@@ -58,4 +58,9 @@ I do this study with the help of this [book](https://www.amazon.com/-/en/Michael
     <summary>Chapter 4.3 | Algorithms</summary>
     Learned about algorithms, mainly how to shuffle and sort out containers.
   </details>
+
+  <details>
+    <summary>Chapter 4.4 | Understanding Vector Performance</summary>
+    Learned how to insert and reserve members into a vector.
+  </details>
 </details>
