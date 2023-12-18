@@ -63,3 +63,8 @@ I do this study with the help of this [book](https://www.amazon.com/-/en/Michael
     Learned how to insert and reserve members into a vector.
   </details>
 </details>
+
+<details>
+  <summary>12/18/2023</summary>
+  I learned how to make Hangman in C++, I mainly learned how to compare each element of the input to the vector!
+</details>
