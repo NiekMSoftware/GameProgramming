@@ -187,7 +187,7 @@ void Chapter4_4()
 	cout << "\nAdding score.\n";
 	scores.push_back(0); // memory is reallocated to accommodate growth
 	cout << "Vector size is: " << scores.size() << endl;
-	cout << "Vector capacity is: " << scores.capacity() << endl;
+	cout << "Vector capacity is: " << scores.capacity() << endl; // capacity should have changed with values between 10 - 20
 
 	cout << "\nReserving more memory.\n";
 	scores.reserve(20);
