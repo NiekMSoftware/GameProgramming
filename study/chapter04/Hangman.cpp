@@ -11,6 +11,8 @@ void Hangman::RunGame()
 	words.push_back("GUESS");
 	words.push_back("HANGMAN");
 	words.push_back("DIFFICULT");
+	words.push_back("CINDER-BLOCK");
+	words.push_back("SEESHARP");
 
 	// generate random words to write to the console
 	srand(static_cast<unsigned int>(time(0)));
