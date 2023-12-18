@@ -7,6 +7,8 @@
 #include <ctime>
 #include <cstdlib>
 
+#include "Hangman.h"
+
 using namespace std;
 
 // Hero's Inventory 2.0
@@ -26,7 +28,9 @@ void Chapter4_4();
 
 int main()
 {
-	Chapter4_4();
+	auto* hangman = new Hangman();
+	hangman->RunGame();
+
 	return 0;
 }
 
