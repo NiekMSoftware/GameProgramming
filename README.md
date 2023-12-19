@@ -73,8 +73,12 @@ I do this study with the help of this [book](https://www.amazon.com/-/en/Michael
   <summary>12/19/2023</summary>
   Made a [release](https://github.com/NiekMSoftware/GameProgramming/releases/tag/hangman-v1.0.0) of chapter 4's Hangman.
   What I have studied for the rest of today
-  
-  Chapter 5.1 | Abstractness and declaring functions
-  
-  Chapter 5.2 | Understanding Encapsulation and return values with parameters
+  <details>
+    <summary>Chapter 5.1 </summary>
+    I learned about Abstractness and declaring functions
+  </details>
+  <details>
+    <summary>Chapter 5.2</summary>
+    I learned about understanding Encapsulation and return values with parameters
+  </details>
 </details>
