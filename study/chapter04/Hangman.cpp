@@ -14,66 +14,76 @@ void Hangman::RunGame()
 	words.push_back("CINDER-BLOCK");
 	words.push_back("SEESHARP");
 
-	// generate random words to write to the console
-	srand(static_cast<unsigned int>(time(0)));
-	std::random_shuffle(words.begin(), words.end());
+	char answer;	// to get final answer of player
 
-	const string THE_WORD = words[0];
-	int wrong = 0;
-	string soFar(THE_WORD.size(), '-');
-	string used = "";
-
-	cout << "Welcome to Hangman. Good luck!\n";
-
-	// main loop
-	while((wrong < MAX_WRONG) && (soFar != THE_WORD))
+	do
 	{
-		cout << "\n\nYou have " << (MAX_WRONG - wrong);
-		cout << " incorrect guesses left.\n";
-		cout << "\nYou've used the following letters:\n" << used << endl;
-		cout << "\nSo far, the word is:\n" << soFar << endl;
+		// generate random words to write to the console
+		srand(static_cast<unsigned int>(time(0)));
+		std::random_shuffle(words.begin(), words.end());
 
-		// Get player guess
-		char guess;
-		cout << "\n\nEnter your guess: ";
-		cin >> guess;
-		guess = toupper(guess);	// make uppercase since secret word in uppercase
-		while (used.find(guess) != string::npos)
+		const string THE_WORD = words[0];
+		int wrong = 0;
+		string soFar(THE_WORD.size(), '-');
+		string used = "";
+
+		cout << "Welcome to Hangman. Good luck!\n";
+
+		// main loop
+		while ((wrong < MAX_WRONG) && (soFar != THE_WORD))
 		{
-			cout << "\nYou've already guessed " << guess << endl;
-			cout << "Enter your guess: ";
+			cout << "\n\nYou have " << (MAX_WRONG - wrong);
+			cout << " incorrect guesses left.\n";
+			cout << "\nYou've used the following letters:\n" << used << endl;
+			cout << "\nSo far, the word is:\n" << soFar << endl;
+
+			// Get player guess
+			char guess;
+			cout << "\n\nEnter your guess: ";
 			cin >> guess;
-			guess = toupper(guess);
-		}
-
-		used += guess;
-
-		if (THE_WORD.find(guess) != string::npos)
-		{
-			cout << "That's right! " << guess << " is in the word.\n";
-
-			// update soFar to include newly guessed letters
-			for (int i = 0; i < THE_WORD.length(); ++i)
+			guess = toupper(guess);	// make uppercase since secret word in uppercase
+			while (used.find(guess) != string::npos)
 			{
-				if (THE_WORD[i] == guess)
+				cout << "\nYou've already guessed " << guess << endl;
+				cout << "Enter your guess: ";
+				cin >> guess;
+				guess = toupper(guess);
+			}
+
+			used += guess;
+
+			if (THE_WORD.find(guess) != string::npos)
+			{
+				cout << "That's right! " << guess << " is in the word.\n";
+
+				// update soFar to include newly guessed letters
+				for (int i = 0; i < THE_WORD.length(); ++i)
 				{
-					soFar[i] = guess;
+					if (THE_WORD[i] == guess)
+					{
+						soFar[i] = guess;
+					}
 				}
 			}
+			else
+			{
+				cout << "Sorry, " << guess << " isn't in the word.\n";
+				++wrong;
+			}
+		}
+
+		if (wrong == MAX_WRONG)
+		{
+			cout << "\nYou've been hanged!\n";
 		}
 		else
 		{
-			cout << "Sorry, " << guess << " isn't in the word.\n";
-			++wrong;
+			cout << "\nYou guessed it!\n";
 		}
-	}
 
-	if (wrong == MAX_WRONG)
-	{
-		cout << "\nYou've been hanged!";
-	}
-	else
-	{
-		cout << "\nYou guessed it!";
-	}
+		cout << "\nWould you like to play again? (y/n): ";
+		cin >> answer;
+	} while (answer != 'n');
+
+	answer = ' '; // reset answer's value
 }
