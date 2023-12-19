@@ -68,3 +68,12 @@ I do this study with the help of this [book](https://www.amazon.com/-/en/Michael
   <summary>12/18/2023</summary>
   I learned how to make Hangman in C++, I mainly learned how to compare each element of the input to the vector!
 </details>
+
+<details>
+  <summary>12/19/2023</summary>
+  Made a [release](https://github.com/NiekMSoftware/GameProgramming/releases/tag/hangman-v1.0.0) of chapter 4's Hangman.
+
+  The following I have done today:
+- Chapter 5.1 |  Abstractness and declaring functions
+- Chapter 5.2 | Understanding Encapsulation and return values with parameters
+</details>
