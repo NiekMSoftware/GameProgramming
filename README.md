@@ -74,6 +74,7 @@ I do this study with the help of this [book](https://www.amazon.com/-/en/Michael
   Made a [release](https://github.com/NiekMSoftware/GameProgramming/releases/tag/hangman-v1.0.0) of chapter 4's Hangman.
   What I have studied for the rest of today
   
-  Chapter 5.1 |  Abstractness and declaring functions
+  Chapter 5.1 | Abstractness and declaring functions
+  
   Chapter 5.2 | Understanding Encapsulation and return values with parameters
 </details>
