@@ -1,4 +1,7 @@
 ﻿#include <iostream>
+#include <string> // needed for Mad-Lib
+
+#include "Mad_Lib.h"
 
 using namespace std;
 
@@ -19,7 +22,10 @@ void chapter5_3();
 
 int main()
 {
-	chapter5_3();
+	// Mad-Lib
+	auto* story = new Mad_Lib();
+	story->RunApp();
+
 	return 0;
 }
 
