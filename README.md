@@ -82,3 +82,8 @@ I do this study with the help of this [book](https://www.amazon.com/-/en/Michael
     I learned about understanding Encapsulation and return values with parameters
   </details>
 </details>
+
+<details>
+  <summary>12/20/2023</summary>
+  Finished up Chapter 5, was about overloading functions. Also improved the [HangMan](https://github.com/NiekMSoftware/GameProgramming/tree/main/study/HangMan2.0) application!
+</details>
