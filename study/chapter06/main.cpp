@@ -1,4 +1,6 @@
 ﻿#include <iostream>
+#include <string>
+#include <vector>
 
 // Referencing
 // Demonstrates using references
@@ -10,9 +12,15 @@ void Chapter6_2();
 void badSwap(int x, int y);
 void goodSwap(int& x, int& y);
 
+// Inventory Displayer
+// Demonstrates const references
+void Chapter6_3();
+// param vector is a constant ref to a vector of strings
+void display(const std::vector<std::string>& inventory);
+
 int main()
 {
-	Chapter6_2();
+	Chapter6_3();
 }
 
 void Chapter6_1()
@@ -65,4 +73,24 @@ void goodSwap(int& x, int& y)
 	int temp = x;
 	x = y;
 	y = temp;
+}
+
+void Chapter6_3()
+{
+	std::vector<std::string> inventory;
+	inventory.push_back("sword");
+	inventory.push_back("armor");
+	inventory.push_back("shield");
+
+	display(inventory);
+}
+
+void display(const std::vector<std::string>& vec)
+{
+	std::cout << "Your items:\n";
+	for(std::vector<std::string>::const_iterator iter = vec.begin();
+		iter != vec.end(); ++iter)
+	{
+		std::cout << *iter << '\n';
+	}
 }
