@@ -121,6 +121,7 @@ void game::displayBoard(const vector<char>& board)
 	cout << "\n\t" << board[3] << " | " << board[4] << " | " << board[5];
 	cout << "\n\t" << "=========";
 	cout << "\n\t" << board[6] << " | " << board[7] << " | " << board[8];
+	cout << "\n";
 }
 
 char game::winner(const vector<char>& board)
@@ -166,7 +167,7 @@ inline bool game::isLegal(const vector<char>& board, int move)
 
 int game::humanMove(const vector<char>& board, char human)
 {
-	int move = askNumber("Where will you move?", (board.size() - 1));
+	int move = askNumber("\nWhere will you move?", (board.size() - 1));
 	while (!isLegal(board, move))
 	{
 		cout << "\nThat square is already occupied, foolish human.\n";
@@ -185,6 +186,92 @@ int game::computerMove(vector<char>& board, char computer)
 	// if the computer can win on next move, that's the move to make
 	while(!found && move < board.size())
 	{
-		
+		if(isLegal(board, move))
+		{
+			board[move] = computer;
+			found = winner(board) == computer;
+			board[move] = EMPTY;
+		}
+
+		if (!found)
+		{
+			++move;
+		}
+	}
+
+	// otherwise, if human can win on next move, that's the move to make
+	if (!found)
+	{
+		move = 0;
+		char human = opponent(computer);
+		while (!found && move < board.size())
+		{
+			if(isLegal(board, move))
+			{
+				board[move] = human;
+				found = winner(board) == human;
+				board[move] = EMPTY;
+			}
+
+			if(!found)
+			{
+				++move;
+			}
+		}
+
+		if (found)
+		{
+			board[move] = computer;
+		}
+	}
+
+	// otherwise, moving to the best open square is the move to make
+	if(!found)
+	{
+		move = 0;
+		unsigned int i = 0;
+
+		const int BEST_MOVES[] = { 4, 0, 2, 6, 8, 1, 3, 5, 7 };
+
+		// pick best open square
+		while(!found && i < board.size())
+		{
+			move = BEST_MOVES[i];
+
+			// check if its legal
+			if(isLegal(board, move))
+			{
+				found = true;
+				board[move] = computer;
+			}
+
+			++i;
+		}
+
+		cout << "\nI shall take square number: " << move << endl;
+	}
+
+	return move;
+}
+
+void game::announceWinner(char winner, char computer, char human)
+{
+	if (winner == computer)
+	{
+		cout << "\n" << winner << "'s won!\n";
+		cout << "As I predicted, human. I am triumphant once more -- proof\n";
+		cout << "that computers are superior to humans in all regards.\n";
+	}
+	else if (winner == human)
+	{
+		cout << "\n" << winner << "'s won!\n";
+		cout << "No, no! It cannot be! Somehow you tricked me, human.\n";
+		cout << "But never again! I, the computer, so swear it!\n";
+	}
+	else
+	{
+		cout << "\n" << "It's a tie.\n";
+		cout << "You were most lucky, human, and somehow to tie me.\n";
+		cout << "Celebrate... for this is the best you will ever achieve.\n";
 	}
 }
