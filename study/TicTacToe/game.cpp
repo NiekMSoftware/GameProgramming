@@ -21,9 +21,9 @@ void game::runGame()
 	displayBoard(board);
 
 	// run loop
-	while(winner(board) == NO_ONE)
+	while (winner(board) == NO_ONE)
 	{
-		if(turn == human)
+		if (turn == human)
 		{
 			move = humanMove(board, human);
 			board[move] = human;
@@ -39,6 +39,18 @@ void game::runGame()
 	}
 
 	announceWinner(winner(board), computer, human);
+
+	// play again
+	char input = ' ';
+	do
+	{
+		cout << "\n\nWould you like to play again?\n";
+		cout << "> ";
+		cin >> input;
+
+		if (input == 'y')
+			runGame();
+	} while (input == 'n' && input == 'y');
 }
 
 void game::instructions()
