@@ -127,7 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Boss.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\Enemy.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib\Boss.h" />
+    <ClInclude Include="lib\Enemy.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
