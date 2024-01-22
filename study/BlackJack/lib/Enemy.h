@@ -7,8 +7,10 @@ using std::cout;
 class Enemy
 {
 public:
-	int m_Damage;
+	Enemy(int damage = 10);
+	void virtual Taunt() const;
+	void virtual Attack() const;
 
-	Enemy();
-	void Attack() const;
+private:
+	int m_Damage;
 };

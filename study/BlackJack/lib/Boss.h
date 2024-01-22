@@ -4,8 +4,7 @@
 class Boss : public Enemy
 {
 public:
-	int m_DamageMultiplier;
-
-	Boss();
-	void SpecialAttack();
+	Boss(int damage = 30);
+	void Taunt() const override;
+	void Attack() const override;
 };
