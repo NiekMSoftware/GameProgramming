@@ -4,6 +4,7 @@
 #ignore the debug stuff
 \x64
 \Debug
+\.idea
 
 #ignore gitattributes
 *.gitattributes
