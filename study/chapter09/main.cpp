@@ -33,6 +33,10 @@ void testDestructor();
 void testCopyConstructor(Critter2 aCopy);
 void testAssignmentOp();
 
+// Game Lobby
+// Simulates a game lobby where players wait
+void Chapter9_5();
+
 int main()
 {
 	Chapter9_4();

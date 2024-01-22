@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chapter08", "chapter08\chap
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chapter09", "chapter09\chapter09.vcxproj", "{20E7F86B-CED9-4794-BE93-1522AFE73C42}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameLobby", "GameLobby\GameLobby.vcxproj", "{E22074E8-EC23-460C-AC0A-792B7A14150A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -121,6 +123,14 @@ Global
 		{20E7F86B-CED9-4794-BE93-1522AFE73C42}.Release|x64.Build.0 = Release|x64
 		{20E7F86B-CED9-4794-BE93-1522AFE73C42}.Release|x86.ActiveCfg = Release|Win32
 		{20E7F86B-CED9-4794-BE93-1522AFE73C42}.Release|x86.Build.0 = Release|Win32
+		{E22074E8-EC23-460C-AC0A-792B7A14150A}.Debug|x64.ActiveCfg = Debug|x64
+		{E22074E8-EC23-460C-AC0A-792B7A14150A}.Debug|x64.Build.0 = Debug|x64
+		{E22074E8-EC23-460C-AC0A-792B7A14150A}.Debug|x86.ActiveCfg = Debug|Win32
+		{E22074E8-EC23-460C-AC0A-792B7A14150A}.Debug|x86.Build.0 = Debug|Win32
+		{E22074E8-EC23-460C-AC0A-792B7A14150A}.Release|x64.ActiveCfg = Release|x64
+		{E22074E8-EC23-460C-AC0A-792B7A14150A}.Release|x64.Build.0 = Release|x64
+		{E22074E8-EC23-460C-AC0A-792B7A14150A}.Release|x86.ActiveCfg = Release|Win32
+		{E22074E8-EC23-460C-AC0A-792B7A14150A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
