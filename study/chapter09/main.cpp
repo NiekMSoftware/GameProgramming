@@ -18,9 +18,16 @@ void Peek(const Critter& critter);
 ostream& operator<<(ostream& os, const Critter& aCritter);
 void Chapter9_2();
 
+// Heap
+// Demonstrates dynamically allocating memory
+int* intOnHeap();	// returns an int on the heap
+void leak1();		// creates a memory leak
+void leak2();		// creates another memory leak
+void Chapter9_3();
+
 int main()
 {
-	Chapter9_2();
+	Chapter9_3();
 	return 0;
 }
 
@@ -62,4 +69,42 @@ ostream& operator<<(ostream& os, const Critter& aCritter)
 	os << "Critter Object - ";
 	os << "m_Name: " << aCritter.m_Name;
 	return os;
+}
+
+int* intOnHeap()
+{
+	int* pTemp = new int(20);
+	return pTemp;
+}
+
+void leak1()
+{
+	int* drip = new int(30);
+}
+
+void leak2()
+{
+	int* drip2 = new int(50);
+	drip2 = new int(100);
+	delete drip2;
+}
+
+void Chapter9_3()
+{
+	int* pHeap = new int;
+	*pHeap = 10;
+	cout << "*pHeap: " << *pHeap << "\n\n";
+
+	int* pHeap2 = intOnHeap();
+	cout << "*pHeap2: " << *pHeap2 << "\n\n";
+
+	cout << "Freeing memory pointed to by pHeap.\n\n";
+	delete pHeap;
+
+	cout << "Freeing memory pointed to by pHeap2.\n\n";
+	delete pHeap2;
+
+	// get rid of dangling pointers
+	pHeap = 0;
+	pHeap2 = 0;
 }
