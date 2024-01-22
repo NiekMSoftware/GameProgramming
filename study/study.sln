@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chapter09", "chapter09\chap
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameLobby", "GameLobby\GameLobby.vcxproj", "{E22074E8-EC23-460C-AC0A-792B7A14150A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BlackJack", "BlackJack\BlackJack.vcxproj", "{600D1F47-8ACF-4F4D-B50D-D90C5CDA4A9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -131,6 +133,14 @@ Global
 		{E22074E8-EC23-460C-AC0A-792B7A14150A}.Release|x64.Build.0 = Release|x64
 		{E22074E8-EC23-460C-AC0A-792B7A14150A}.Release|x86.ActiveCfg = Release|Win32
 		{E22074E8-EC23-460C-AC0A-792B7A14150A}.Release|x86.Build.0 = Release|Win32
+		{600D1F47-8ACF-4F4D-B50D-D90C5CDA4A9F}.Debug|x64.ActiveCfg = Debug|x64
+		{600D1F47-8ACF-4F4D-B50D-D90C5CDA4A9F}.Debug|x64.Build.0 = Debug|x64
+		{600D1F47-8ACF-4F4D-B50D-D90C5CDA4A9F}.Debug|x86.ActiveCfg = Debug|Win32
+		{600D1F47-8ACF-4F4D-B50D-D90C5CDA4A9F}.Debug|x86.Build.0 = Debug|Win32
+		{600D1F47-8ACF-4F4D-B50D-D90C5CDA4A9F}.Release|x64.ActiveCfg = Release|x64
+		{600D1F47-8ACF-4F4D-B50D-D90C5CDA4A9F}.Release|x64.Build.0 = Release|x64
+		{600D1F47-8ACF-4F4D-B50D-D90C5CDA4A9F}.Release|x86.ActiveCfg = Release|Win32
+		{600D1F47-8ACF-4F4D-B50D-D90C5CDA4A9F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
