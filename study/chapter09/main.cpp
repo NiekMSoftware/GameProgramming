@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 
+#include "Critter.h"
 #include "critter_farm.h"
 
 using std::cout;
@@ -25,9 +26,16 @@ void leak1();		// creates a memory leak
 void leak2();		// creates another memory leak
 void Chapter9_3();
 
+// Heap Data Member
+// Demonstrates an object with a dynamically allocated data member
+void Chapter9_4();
+void testDestructor();
+void testCopyConstructor(Critter2 aCopy);
+void testAssignmentOp();
+
 int main()
 {
-	Chapter9_3();
+	Chapter9_4();
 	return 0;
 }
 
@@ -107,4 +115,43 @@ void Chapter9_3()
 	// get rid of dangling pointers
 	pHeap = 0;
 	pHeap2 = 0;
+}
+
+void Chapter9_4()
+{
+	testDestructor();
+	cout << endl;
+
+	Critter2 crit("Pookie", 5);
+	crit.Greet();
+	testCopyConstructor(crit);
+	crit.Greet();
+	cout << endl;
+
+	testAssignmentOp();
+}
+
+void testDestructor()
+{
+	Critter2 toDestroy("Rover", 3);
+	toDestroy.Greet();
+}
+
+void testCopyConstructor(Critter2 aCopy)
+{
+	aCopy.Greet();
+}
+
+void testAssignmentOp()
+{
+	Critter2 crit1("crit1", 7);
+	Critter2 crit2("crit2", 9);
+	crit1 = crit2;
+	crit1.Greet();
+	crit2.Greet();
+	cout << endl;
+
+	Critter2 crit3("crit", 11);
+	crit3 = crit3;
+	crit3.Greet();
 }

@@ -5,6 +5,9 @@
     <ClCompile Include="critter_farm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Critter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
@@ -16,6 +19,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="critter_farm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Critter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
