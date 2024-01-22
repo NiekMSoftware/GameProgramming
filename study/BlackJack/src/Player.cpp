@@ -1,4 +1,4 @@
-﻿#include "Player.h"
+﻿#include "../lib/Player.h"
 
 Player::Player(const string& name):
     GenericPlayer(name)

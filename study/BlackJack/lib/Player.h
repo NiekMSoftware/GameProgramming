@@ -5,10 +5,10 @@ class Player : public GenericPlayer
 {
 public:
     Player(const string& name = "");
-    virtual ~Player();
+    ~Player() override;
 
     // returns whether or not the player wants another hit
-    virtual bool IsHitting() const;
+    bool IsHitting() const override;
 
     // announces that the player wins
     void Win() const;

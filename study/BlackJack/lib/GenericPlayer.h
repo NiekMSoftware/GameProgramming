@@ -17,8 +17,11 @@ class GenericPlayer : public Hand
     friend ostream& operator<<(ostream& os, const GenericPlayer& aGenericPlayer);
 public:
     GenericPlayer(const string& name = "");
-    virtual ~GenericPlayer();
+    ~GenericPlayer() override;
 
+    // indicates whether or not generic player wants to keep hitting
+    virtual bool IsHitting() const;
+    
     // indicates whether generic player has busted - has a total greater than 21
     bool IsBusted() const;
 

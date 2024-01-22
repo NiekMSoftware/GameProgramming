@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "Card.h"
+#include "Player.h"
 
 using std::cout;
 using std::endl;

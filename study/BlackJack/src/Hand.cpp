@@ -1,4 +1,4 @@
-﻿#include "Hand.h"
+﻿#include "../lib/Hand.h"
 Hand::Hand()
 {
     m_Cards.reserve(7);
@@ -17,10 +17,11 @@ void Hand::Add(Card* pCard)
 void Hand::Clear()
 {
     // iterate through vector, freeing all memory on the heap
-    for (auto* card : m_Cards)
+    vector<Card*>::iterator iter = m_Cards.begin();
+    for (iter = m_Cards.begin(); iter != m_Cards.begin(); ++iter)
     {
-        delete card;
-        card = 0;
+        delete *iter;
+        *iter = 0;
     }
 
     // clear the vector of pointers
