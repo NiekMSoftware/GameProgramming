@@ -8,9 +8,9 @@ class Enemy
 {
 public:
 	Enemy(int damage = 10);
-	void virtual Taunt() const;
+	virtual ~Enemy();
 	void virtual Attack() const;
 
-private:
-	int m_Damage;
+protected:
+	int* m_pDamage;
 };

@@ -4,7 +4,10 @@
 class Boss : public Enemy
 {
 public:
-	Boss(int damage = 30);
-	void Taunt() const override;
+	Boss(int multiplier = 3);
+	~Boss() override;
 	void Attack() const override;
+
+private:
+	int* m_pMultiplier;
 };

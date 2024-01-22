@@ -1,15 +1,18 @@
 #include "../lib/Enemy.h"
 
-Enemy::Enemy(int damage):
-m_Damage(damage)
-{}
-
-void Enemy::Taunt() const
+Enemy::Enemy(int damage)
 {
-	cout << "The enemy says it will fight you!\n";
+	m_pDamage = new int(damage);
+}
+
+Enemy::~Enemy()
+{
+	cout << "In Enemy destructor, deleting m_pDamage.\n";
+	delete m_pDamage;
+	m_pDamage = 0;
 }
 
 void Enemy::Attack() const
 {
-	cout << "Attack! Inflicts " << m_Damage << " damage!";
+	cout << "An enemy attacks and inflicts " << *m_pDamage << " damage\n";
 }

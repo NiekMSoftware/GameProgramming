@@ -7,15 +7,12 @@ using std::cout;
 
 int main()
 {
-	cout << "Enemy Object:\n";
-	Enemy enemy1;
-	enemy1.Taunt();
-	enemy1.Attack();
+	cout << "Calling Attack() on Boss object through pointer to Enemy:\n";
+	Enemy* pBadGuy = new Boss();
+	pBadGuy->Attack();
 
-	cout << "\n\nBoss Object:\n";
-	Boss boss1;
-	boss1.Taunt();
-	boss1.Attack();
-
+	cout << "\n\nDeleting pointer to Enemy:\n";
+	delete pBadGuy;
+	pBadGuy = 0;
 	return 0;
 }

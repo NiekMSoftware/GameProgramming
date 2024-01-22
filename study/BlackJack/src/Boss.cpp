@@ -1,16 +1,19 @@
 ﻿#include "../lib/Boss.h"
 
-Boss::Boss(int damage):
-Enemy(damage)			// call base class constructor with arg
-{}
-
-void Boss::Taunt() const
+Boss::Boss(int multiplier)
 {
-	cout << "The boss says he will end your pitiful existence.\n";
+	m_pMultiplier = new int(multiplier);
+}
+
+Boss::~Boss()
+{
+	cout << "In Boss destructor, deleting m_pMultiplier.\n";
+	delete m_pMultiplier;
+	m_pMultiplier = 0;
 }
 
 void Boss::Attack() const
 {
-	Enemy::Attack();	// call base class member func
-	cout << " And laughs heartily at you.\n";
+	cout << "A boss attacks and inflicts " << (*m_pDamage) * (*m_pMultiplier)
+		<< " damage points.";
 }
