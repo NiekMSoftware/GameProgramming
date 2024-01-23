@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="lib\Deck.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\Card.cpp">
       <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
@@ -393,6 +394,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\Card.h" />
+    <ClInclude Include="lib\Deck.h" />
     <ClInclude Include="lib\GenericPlayer.h" />
     <ClInclude Include="lib\Hand.h" />
     <ClInclude Include="lib\House.h" />

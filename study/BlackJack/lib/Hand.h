@@ -5,7 +5,7 @@
 #include<vector>
 
 using std::vector;
-
+using std::endl;
 
 class Hand
 {
