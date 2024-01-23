@@ -23,6 +23,11 @@ void Deck::Populate()
     }
 }
 
+void Deck::Shuffle()
+{
+    random_shuffle(m_Cards.begin(), m_Cards.end());
+}
+
 void Deck::Deal(Hand& aHand)
 {
     if(!m_Cards.empty())
@@ -38,13 +43,13 @@ void Deck::Deal(Hand& aHand)
 
 void Deck::AdditionalCards(GenericPlayer& aGenericPlayer)
 {
-    cout << endl;
+    cout << "\n";
 
     // continue to deal a card as long as generic player isn't busted and wants another hit
     while (!(aGenericPlayer.IsBusted()) && aGenericPlayer.IsHitting())
     {
         Deal(aGenericPlayer);
-        cout << aGenericPlayer << endl;
+        //cout << aGenericPlayer << "\n";
 
         if(aGenericPlayer.IsBusted())
         {

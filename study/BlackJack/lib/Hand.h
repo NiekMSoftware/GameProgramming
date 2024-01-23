@@ -1,11 +1,12 @@
 ﻿#pragma once
+
 #include "Card.h"
 
-#include<iostream>
+#include <algorithm>
 #include<vector>
 
 using std::vector;
-using std::endl;
+using std::random_shuffle;
 
 class Hand
 {
