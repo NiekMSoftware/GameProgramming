@@ -16,9 +16,3 @@ void GenericPlayer::Bust() const
 {
     cout << m_Name << " busts.\n";   
 }
-
-ostream& operator<<(ostream& os, const GenericPlayer& aGenericPlayer)
-{
-    os << aGenericPlayer.m_Name << ":\t";
-    return os;
-}

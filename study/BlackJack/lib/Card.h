@@ -1,8 +1,10 @@
 ﻿#pragma once
 
 #include <iostream>
+#include <string>
 
 using std::ostream;
+using std::string;
 
 class Card
 {
@@ -33,7 +35,7 @@ public:
     };
 
     // overloading << operator so can send Card object to std
-    friend ostream& operator<<(ostream os, const Card& aCard);
+    friend ostream& operator<<(ostream& os, const Card& aCard);
 
     Card(rank r = ACE, suit s = SPADES, bool ifu = true);
 
