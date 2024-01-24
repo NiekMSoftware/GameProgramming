@@ -97,3 +97,18 @@ void Game::Play()
         m_House.Clear();
     }
 }
+
+void Game::Reset()
+{
+    // remove everyone's cards
+    vector<Player>::iterator pPlayer;
+    for (pPlayer = m_Players.begin(); pPlayer != m_Players.end(); ++pPlayer)
+    {
+        pPlayer->Clear();
+    }
+    m_House.Clear();
+
+    // repopulate and shuffle the deck
+    m_Deck.Populate();
+    m_Deck.Shuffle();
+}

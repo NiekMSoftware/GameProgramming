@@ -44,6 +44,11 @@ int main()
         aGame.Play();
         cout << "\nDo you want to play again? (Y/N): ";
         cin >> again;
+
+        if(again == 'y' || again == 'Y')
+        {
+            aGame.Reset();
+        }
     }
     
     return 0;
@@ -53,9 +58,9 @@ int main()
 // overloads << operator so Card object can be sent to cout
 ostream& operator<<(ostream& os, const Card& aCard)
 {
-    const string RANKS[] = {"0", "A", "2", "3", "4", "5", "6", "7",
-                            "8", "9", "10", "J", "Q", "K"};
-    const string SUITS[] = {"c", "d", "h", "s"};
+    const string RANKS[] = {"0", "ACE", "2", "3", "4", "5", "6", "7",
+                            "8", "9", "10", "JOKER", "QUEEN", "KING"};
+    const string SUITS[] = {"clubs", "diamonds", "hearts", "spades"};
 
     if(aCard.m_IsFaceUp)
     {

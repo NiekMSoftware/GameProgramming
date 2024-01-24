@@ -23,6 +23,9 @@ public:
     // plays the game of blackjack
     void Play();
 
+    // Reset the game
+    void Reset();
+
 private:
     Deck m_Deck;
     House m_House;
